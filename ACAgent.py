@@ -1,5 +1,9 @@
 import torch
-from network import ACNetwork
+from ACNetwork import ACNetwork
+
+from importlib import reload
+reload(sys.modules['ACNetwork'])
+from ACNetwork import ACNetwork
 
 
 def format_observations(observation, keys=("glyphs", "blstats")):
