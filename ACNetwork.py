@@ -23,7 +23,7 @@ class ACNetwork(nn.Module):
         :param observation_space: the state space of the environment
         :param action_space: the action space of the environment
         """
-        super(DQN,self).__init__()
+        super(ACNetwork,self).__init__()
 
         self.glyph_shape = observation_shape["glyphs"].shape
         self.blstats_size = observation_shape["blstats"].shape[0]
