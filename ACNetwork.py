@@ -44,7 +44,7 @@ class ACNetwork(nn.Module):
 
         self.embed = nn.Embedding(nethack.MAX_GLYPH, self.k_dim)
 
-        self.device = self.device
+        self.device = device
 
         K = embedding_dim  # number of input filters
         F = 3  # filter dimensions
