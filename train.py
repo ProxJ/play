@@ -60,7 +60,7 @@ def train(env, agent, flags):
     # set random seeds (for reproducibility)
     torch.manual_seed(flags['seed'])
     torch.cuda.manual_seed_all(flags['seed'])
-    envs = [make_env(flags['env'], seed, i) for i in range(flags['num_envs'])]
+    envs = [make_env(flags['env'], flags['seed'], i) for i in range(flags['num_envs'])]
     envs = SubprocVecEnv(envs)
 
     # instantiate the policy and optimiser
